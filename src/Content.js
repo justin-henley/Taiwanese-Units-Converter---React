@@ -8,13 +8,13 @@ const Content = () => {
   const [entries, setEntries] = useState([
     {
       id: 0,
-      value: 10,
+      value: 0,
       unit: "kg",
     },
     {
       id: 1,
-      value: 20,
-      unit: "pound",
+      value: 0,
+      unit: "kg",
     },
   ]);
 
@@ -32,7 +32,7 @@ const Content = () => {
 
     // swap entries for relevant defaults
     const newUnit =
-      type === "mass" ? "kg" : type === "area" ? "sqmeter" : "meter";
+      type === "mass" ? "pound" : type === "area" ? "sqmeter" : "meter";
     const newEntries = [
       {
         id: 0,
@@ -46,12 +46,6 @@ const Content = () => {
       },
     ];
     setEntries(newEntries);
-
-    newEntries[0].unit =
-      type === "mass" ? "kg" : type === "area" ? "sqmeter" : "meter";
-
-    if (type === "mass") {
-    }
   };
 
   // Handles changes to the unit on either of the values

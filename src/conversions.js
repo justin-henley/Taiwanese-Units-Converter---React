@@ -1,14 +1,3 @@
-// Enum for conversion options
-export const conversionTypes = {
-  AREA: "area",
-  LENGTH: "length",
-  MASS: "mass",
-};
-
-// Note to self: For history to work, you can't use live update, or every keystroke is a "new" conversion
-// Stores conversion history as object array
-// export let conversionHistory = [];
-
 // All conversion values
 // TODO find a way to manage the floating point imprecision
 export const conversionValues = {
@@ -60,25 +49,6 @@ export const conversionValues = {
   },
 };
 
-export const getTypeUnits = (type) => {
-  let unitNames = [];
-  switch (type) {
-    case conversionTypes.AREA:
-      unitNames = Object.keys(conversionValues.area);
-  }
-
-  return unitNames;
-};
-
-/* // ADT interface for unit conversions
-/**
- *
- * @param {number} measure - The measure value in fromUnits
- * @param {string} fromUnit - The unit of the given measure
- * @param {string} toUnit - The unit to convert the measure to
- * @param {string} unitType - The type, which must be a member of the enum
- * @returns {number} The measure after conversion to the toUnit
- */
 export function convertMeasure(measure, fromUnit, toUnit, unitType) {
   // Check all arguments provided
   if (!measure || !fromUnit || !toUnit || !unitType) return undefined;
@@ -109,7 +79,3 @@ export function convertMeasure(measure, fromUnit, toUnit, unitType) {
   console.log(conversionHistory); */
   return convertedMeasure;
 }
-
-// prob only taiwanese to decimal notation, one-way
-// export function convertNumbers(value, unit) {}
-// TODO should be separate module
