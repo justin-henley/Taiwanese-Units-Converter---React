@@ -1,7 +1,31 @@
 import React from "react";
 import Entry from "./Entry";
+import { useState } from "react";
 
-const Form = ({ entries, setEntries, numHandler, unitHandler }) => {
+const Form = () => {
+  const [entries, setEntries] = useState([
+    {
+      id: 0,
+      value: 10,
+      unit: "kg",
+    },
+    {
+      id: 1,
+      value: 20,
+      unit: "lb",
+    },
+  ]);
+
+  // Handles changes to the unit on either of the values
+  const handleUnitChange = (value, entryChanged) => {
+    console.log(`Unit changed to ${value} on entry ${entryChanged} `);
+  };
+
+  // Handles changes to either number entry field
+  const handleNumberChange = (value, entryChanged) => {
+    console.log(`Number changed to ${value} on entry ${entryChanged} `);
+  };
+
   return (
     <form className="convertForm" onSubmit={(e) => e.preventDefault()}>
       <label htmlFor="inputA">Convert from:</label>
@@ -10,8 +34,8 @@ const Form = ({ entries, setEntries, numHandler, unitHandler }) => {
         key="0"
         box="0"
         entries={entries}
-        numHandler={numHandler}
-        unitHandler={unitHandler}
+        numHandler={handleNumberChange}
+        unitHandler={handleUnitChange}
       />
       <br />
       <label htmlFor="inputB">Convert to:</label>
@@ -20,8 +44,8 @@ const Form = ({ entries, setEntries, numHandler, unitHandler }) => {
         key="1"
         box="1"
         entries={entries}
-        numHandler={numHandler}
-        unitHandler={unitHandler}
+        numHandler={handleNumberChange}
+        unitHandler={handleUnitChange}
       />
     </form>
   );

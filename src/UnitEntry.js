@@ -1,5 +1,4 @@
 import React from "react";
-import UnitOption from "./UnitOption";
 
 const UnitEntry = ({ box, entries, unitHandler }) => {
   const conversions = {
@@ -9,6 +8,8 @@ const UnitEntry = ({ box, entries, unitHandler }) => {
     ton: 100,
   };
 
+  let listKey = 0;
+
   const units = Object.keys(conversions);
 
   return (
@@ -16,13 +17,14 @@ const UnitEntry = ({ box, entries, unitHandler }) => {
       name={"select" + box}
       id={"select" + box}
       onChange={(e) => unitHandler(e.target.value, box)}
+      value={entries[box].unit}
     >
-      <UnitOption unit="hi" />
-      <UnitOption unit="bye" selected="true" />
       {units.map((name) => {
-        let match = name === entries[box].unit;
-        console.log(name, match);
-        return <UnitOption unit={name} selected={match} />;
+        return (
+          <option value={name} key={`${box} + ${listKey++}`}>
+            {name}
+          </option>
+        );
       })}
     </select>
   );
