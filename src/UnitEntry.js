@@ -3,7 +3,6 @@ import React from "react";
 const UnitEntry = ({ box, entries, unitHandler, conversions, unitType }) => {
   let listKey = 0;
 
-  // TODO you hardcoded mass here
   const units = Object.keys(conversions[unitType]);
 
   return (
