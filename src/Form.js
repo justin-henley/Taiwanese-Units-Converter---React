@@ -3,7 +3,7 @@ import Entry from "./Entry";
 import { useState } from "react";
 import { conversionValues, convertMeasure } from "./conversions";
 
-const Form = ({ entries, numHandler, unitHandler, conversions }) => {
+const Form = ({ entries, numHandler, unitHandler, conversions, unitType }) => {
   return (
     <form className="convertForm" onSubmit={(e) => e.preventDefault()}>
       <label htmlFor="inputA">Convert from:</label>
@@ -15,6 +15,7 @@ const Form = ({ entries, numHandler, unitHandler, conversions }) => {
         numHandler={numHandler}
         unitHandler={unitHandler}
         conversions={conversions}
+        unitType={unitType}
       />
       <br />
       <label htmlFor="inputB">Convert to:</label>
@@ -26,6 +27,7 @@ const Form = ({ entries, numHandler, unitHandler, conversions }) => {
         numHandler={numHandler}
         unitHandler={unitHandler}
         conversions={conversions}
+        unitType={unitType}
       />
     </form>
   );

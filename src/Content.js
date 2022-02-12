@@ -97,6 +97,7 @@ const Content = () => {
         numHandler={handleNumberChange}
         unitHandler={handleUnitChange}
         conversions={conversionValues}
+        unitType={unitType}
       />
       <UnitType
         unitTypes={Object.keys(conversionValues)}
