@@ -17,21 +17,6 @@ const Form = () => {
     },
   ]);
 
-  // Convert values
-  // TODO hardcoded mass as unit type
-  const convertValue = (fromIndex, toIndex /* , unitType */) => {
-    const toValue = convertMeasure(
-      entries[fromIndex].value,
-      entries[fromIndex].unit,
-      entries[toIndex].unit,
-      /* unitType */ "mass"
-    );
-
-    const tempEntries = [...entries];
-    tempEntries[toIndex].value = toValue;
-    setEntries(tempEntries);
-  };
-
   // Handles changes to the unit on either of the values
   const handleUnitChange = (unit, entryChanged) => {
     console.log(`Unit changed to ${unit} on entry ${entryChanged} `);
@@ -47,21 +32,23 @@ const Form = () => {
       "mass"
     );
 
-    // TODO the conversions
-    /* convertValue(entryChanged, entryChanged === 0 ? 1 : 0); */
-
     setEntries(tempEntries);
   };
 
   // Handles changes to either number entry field
   const handleNumberChange = (value, entryChanged) => {
     console.log(`Number changed to ${value} on entry ${entryChanged} `);
+    const otherEntry = entryChanged == 1 ? 0 : 1;
     const tempEntries = [...entries];
-    tempEntries[entryChanged] = {
-      id: entryChanged,
-      value: value,
-      unit: entries[entryChanged].unit,
-    };
+
+    tempEntries[entryChanged].value = value;
+
+    tempEntries[otherEntry].value = convertMeasure(
+      tempEntries[entryChanged].value,
+      tempEntries[entryChanged].unit,
+      tempEntries[otherEntry].unit,
+      "mass"
+    );
 
     // TODO the conversions
     setEntries(tempEntries);
