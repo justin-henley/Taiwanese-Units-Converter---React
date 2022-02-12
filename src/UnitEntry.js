@@ -1,16 +1,10 @@
 import React from "react";
 
-const UnitEntry = ({ box, entries, unitHandler }) => {
-  const conversions = {
-    kg: 10,
-    lb: 5,
-    g: 1,
-    ton: 100,
-  };
-
+const UnitEntry = ({ box, entries, unitHandler, conversions }) => {
   let listKey = 0;
 
-  const units = Object.keys(conversions);
+  // TODO you hardcoded mass here
+  const units = Object.keys(conversions.mass);
 
   return (
     <select

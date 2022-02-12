@@ -1,6 +1,7 @@
 import React from "react";
 import Entry from "./Entry";
 import { useState } from "react";
+import { conversionValues } from "./conversions";
 
 const Form = () => {
   const [entries, setEntries] = useState([
@@ -12,18 +13,38 @@ const Form = () => {
     {
       id: 1,
       value: 20,
-      unit: "lb",
+      unit: "pound",
     },
   ]);
 
   // Handles changes to the unit on either of the values
-  const handleUnitChange = (value, entryChanged) => {
-    console.log(`Unit changed to ${value} on entry ${entryChanged} `);
+  const handleUnitChange = (unit, entryChanged) => {
+    console.log(`Unit changed to ${unit} on entry ${entryChanged} `);
+
+    const tempEntries = [...entries];
+    tempEntries[entryChanged] = {
+      id: entryChanged,
+      value: entries[entryChanged].value,
+      unit: unit,
+    };
+
+    // TODO the conversions
+
+    setEntries(tempEntries);
   };
 
   // Handles changes to either number entry field
   const handleNumberChange = (value, entryChanged) => {
     console.log(`Number changed to ${value} on entry ${entryChanged} `);
+    const tempEntries = [...entries];
+    tempEntries[entryChanged] = {
+      id: entryChanged,
+      value: value,
+      unit: entries[entryChanged].unit,
+    };
+
+    // TODO the conversions
+    setEntries(tempEntries);
   };
 
   return (
@@ -36,6 +57,7 @@ const Form = () => {
         entries={entries}
         numHandler={handleNumberChange}
         unitHandler={handleUnitChange}
+        conversions={conversionValues}
       />
       <br />
       <label htmlFor="inputB">Convert to:</label>
@@ -46,6 +68,7 @@ const Form = () => {
         entries={entries}
         numHandler={handleNumberChange}
         unitHandler={handleUnitChange}
+        conversions={conversionValues}
       />
     </form>
   );
