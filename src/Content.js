@@ -1,0 +1,109 @@
+import React from "react";
+import Form from "./Form";
+import { conversionValues, convertMeasure } from "./conversions";
+import { useState } from "react";
+import UnitType from "./UnitType";
+
+const Content = () => {
+  const [entries, setEntries] = useState([
+    {
+      id: 0,
+      value: 10,
+      unit: "kg",
+    },
+    {
+      id: 1,
+      value: 20,
+      unit: "pound",
+    },
+  ]);
+
+  const [unitType, setUnitType] = useState("mass");
+
+  const handleUnitTypeChange = (type) => {
+    console.log("changed type to " + type);
+    //TODO
+
+    // return early if current type is the same as clicked type
+    if (type === unitType) return;
+
+    // update unit type in state
+    setUnitType(type);
+
+    // swap entries for relevant defaults
+    const newUnit =
+      type === "mass" ? "kg" : type === "area" ? "sqmeter" : "meter";
+    const newEntries = [
+      {
+        id: 0,
+        value: 0,
+        unit: newUnit,
+      },
+      {
+        id: 1,
+        value: 0,
+        unit: newUnit,
+      },
+    ];
+    setEntries(newEntries);
+
+    newEntries[0].unit =
+      type === "mass" ? "kg" : type === "area" ? "sqmeter" : "meter";
+
+    if (type === "mass") {
+    }
+  };
+
+  // Handles changes to the unit on either of the values
+  const handleUnitChange = (unit, entryChanged) => {
+    console.log(`Unit changed to ${unit} on entry ${entryChanged} `);
+    const otherEntry = entryChanged == 1 ? 0 : 1;
+    const tempEntries = [...entries];
+
+    tempEntries[entryChanged].unit = unit;
+
+    tempEntries[otherEntry].value = convertMeasure(
+      tempEntries[entryChanged].value,
+      tempEntries[entryChanged].unit,
+      tempEntries[otherEntry].unit,
+      "mass"
+    );
+
+    setEntries(tempEntries);
+  };
+
+  // Handles changes to either number entry field
+  const handleNumberChange = (value, entryChanged) => {
+    console.log(`Number changed to ${value} on entry ${entryChanged} `);
+    const otherEntry = entryChanged == 1 ? 0 : 1;
+    const tempEntries = [...entries];
+
+    tempEntries[entryChanged].value = value;
+
+    tempEntries[otherEntry].value = convertMeasure(
+      tempEntries[entryChanged].value,
+      tempEntries[entryChanged].unit,
+      tempEntries[otherEntry].unit,
+      "mass"
+    );
+
+    // TODO the conversions
+    setEntries(tempEntries);
+  };
+  return (
+    <main>
+      <Form
+        entries={entries}
+        numHandler={handleNumberChange}
+        unitHandler={handleUnitChange}
+        conversions={conversionValues}
+      />
+      <UnitType
+        unitTypes={Object.keys(conversionValues)}
+        typeHandler={handleUnitTypeChange}
+      />
+    </main>
+  );
+};
+
+export default Content;

@@ -1,9 +1,9 @@
-import Form from "./Form";
+import Content from "./Content";
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <Content />
     </div>
   );
 }
