@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Form from "./Form";
 
 function App() {
+  const [entries, setEntries] = useState([
+    {
+      id: 0,
+      value: 10,
+      unit: "kg",
+    },
+    {
+      id: 1,
+      value: 20,
+      unit: "lb",
+    },
+  ]);
+
+  // Handles changes to the unit on either of the values
+  const unitHandler = (value, entryChanged) => {
+    console.log(`Unit changed to ${value} on entry ${entryChanged} `);
+  };
+
+  // Handles changes to either number entry field
+  const numHandler = (value, entryChanged) => {
+    console.log(`Number changed to ${value} on entry ${entryChanged} `);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form
+        entries={entries}
+        setEntries={setEntries}
+        numHandler={numHandler}
+        unitHandler={unitHandler}
+      />
     </div>
   );
 }
