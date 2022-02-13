@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 // TODO fix the way unit changes effect across values
-// TODO fix floating point annooyances
+
 // TODO Add Mandarin for all units
 // TODO Add a language option to switch to Mandarin?
 // TODO Mobile-first CSS with mixins for viewport sizes
