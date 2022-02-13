@@ -12,6 +12,7 @@ const NumEntry = ({ box, entries, numHandler, isDisabled }) => {
       value={entries[box].value}
       disabled={isDisabled}
       onChange={(e) => numHandler(e.target.value, box)}
+      className="NumEntry"
     />
   );
 };

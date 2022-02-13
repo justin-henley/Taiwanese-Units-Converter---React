@@ -4,7 +4,7 @@ const UnitType = ({ unitTypes, typeHandler }) => {
   console.log(unitTypes);
   let key = 0;
   return (
-    <div>
+    <div className="UnitType">
       {unitTypes.map((type) => {
         return (
           <button

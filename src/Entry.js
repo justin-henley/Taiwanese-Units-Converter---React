@@ -12,7 +12,7 @@ const Entry = ({
   isDisabled,
 }) => {
   return (
-    <fieldset>
+    <fieldset className="Entry">
       <NumEntry
         box={box}
         entries={entries}

@@ -48,6 +48,24 @@ const Content = () => {
     setEntries(newEntries);
   };
 
+  // Swaps the input and output values and units
+  const handleSwap = () => {
+    const newEntries = [
+      {
+        id: 0,
+        value: entries[1].value,
+        unit: entries[1].unit,
+      },
+      {
+        id: 1,
+        value: entries[0].value,
+        unit: entries[0].unit,
+      },
+    ];
+
+    setEntries(newEntries);
+  };
+
   // Handles changes to the unit on either of the values
   const handleUnitChange = (unit, entryChanged) => {
     console.log(`Unit changed to ${unit} on entry ${entryChanged} `);
@@ -85,13 +103,14 @@ const Content = () => {
     setEntries(tempEntries);
   };
   return (
-    <main>
+    <main className="Content">
       <Form
         entries={entries}
         numHandler={handleNumberChange}
         unitHandler={handleUnitChange}
         conversions={conversionValues}
         unitType={unitType}
+        handleSwap={handleSwap}
       />
       <UnitType
         unitTypes={Object.keys(conversionValues)}

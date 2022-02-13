@@ -11,6 +11,7 @@ const UnitEntry = ({ box, entries, unitHandler, conversions, unitType }) => {
       id={"select" + box}
       onChange={(e) => unitHandler(e.target.value, box)}
       value={entries[box].unit}
+      className="UnitEntry"
     >
       {units.map((name) => {
         return (
