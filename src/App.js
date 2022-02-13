@@ -10,6 +10,7 @@ import Header from "./Header";
 // TODO Mobile can't hover so buttons don't animate/change color. Use a mixin to change behavior based on size to guess at mobile/tablet
 // TODO Add better comments
 // TODO Clean up any commented-out code or old imports
+// TODO add readme
 
 function App() {
   const appName = "Taiwanese Unit Conversion Calculator";
