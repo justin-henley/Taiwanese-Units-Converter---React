@@ -5,16 +5,17 @@ import { useState } from "react";
 import UnitType from "./UnitType";
 
 const Content = () => {
+  const DECIMAL_PLACES = 8;
   const [entries, setEntries] = useState([
     {
       id: 0,
       value: 0,
-      unit: "Kilogram",
+      unit: "公斤 - Kilogram",
     },
     {
       id: 1,
       value: 0,
-      unit: "Kilogram",
+      unit: "公斤 - Kilogram",
     },
   ]);
 
@@ -70,12 +71,16 @@ const Content = () => {
 
     tempEntries[entryChanged].unit = unit;
 
-    tempEntries[otherEntry].value = convertMeasure(
-      tempEntries[entryChanged].value,
-      tempEntries[entryChanged].unit,
-      tempEntries[otherEntry].unit,
-      unitType
-    );
+    if (entries[entryChanged].value === "") {
+      tempEntries[otherEntry].value = "";
+    } else {
+      tempEntries[otherEntry].value = convertMeasure(
+        tempEntries[entryChanged].value,
+        tempEntries[entryChanged].unit,
+        tempEntries[otherEntry].unit,
+        unitType
+      );
+    }
 
     setEntries(tempEntries);
   };
@@ -87,14 +92,23 @@ const Content = () => {
 
     tempEntries[entryChanged].value = value;
 
-    tempEntries[otherEntry].value = convertMeasure(
-      tempEntries[entryChanged].value,
-      tempEntries[entryChanged].unit,
-      tempEntries[otherEntry].unit,
-      unitType
-    );
+    if (value === "") {
+      tempEntries[otherEntry].value = "";
+    } else {
+      let convertedValue = convertMeasure(
+        tempEntries[entryChanged].value,
+        tempEntries[entryChanged].unit,
+        tempEntries[otherEntry].unit,
+        unitType
+      );
 
-    // TODO the conversions
+      // Round the decimal
+      let roundedValue = +convertedValue.toFixed(DECIMAL_PLACES);
+
+      // Add rounded value to new entries
+      tempEntries[otherEntry].value = roundedValue;
+    }
+
     setEntries(tempEntries);
   };
   return (
