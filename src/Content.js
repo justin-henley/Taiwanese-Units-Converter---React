@@ -66,18 +66,17 @@ const Content = () => {
 
   // Handles changes to the unit on either of the values
   const handleUnitChange = (unit, entryChanged) => {
-    const otherEntry = entryChanged == 1 ? 0 : 1;
     const tempEntries = [...entries];
 
     tempEntries[entryChanged].unit = unit;
 
-    if (entries[entryChanged].value === "") {
-      tempEntries[otherEntry].value = "";
+    if (entries[0].value === "") {
+      tempEntries[1].value = "";
     } else {
-      tempEntries[otherEntry].value = convertMeasure(
-        tempEntries[entryChanged].value,
-        tempEntries[entryChanged].unit,
-        tempEntries[otherEntry].unit,
+      tempEntries[1].value = convertMeasure(
+        tempEntries[0].value,
+        tempEntries[0].unit,
+        tempEntries[1].unit,
         unitType
       );
     }
