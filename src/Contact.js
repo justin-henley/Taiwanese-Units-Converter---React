@@ -8,13 +8,14 @@ const Contact = () => {
       <div className="social">
         <a
           className="socialLink"
-          id="twitterLink"
-          href="http://www.google.com"
+          id="githubLink"
+          href="https://github.com/justin-henley"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaTwitter className="socialIcon" />
+          <FaGithub className="socialIcon" />
         </a>
+
         <a
           className="socialLink"
           id="linkedinLink"
@@ -26,12 +27,12 @@ const Contact = () => {
         </a>
         <a
           className="socialLink"
-          id="githubLink"
-          href="https://github.com/justin-henley"
+          id="twitterLink"
+          href="http://www.google.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub className="socialIcon" />
+          <FaTwitter className="socialIcon" />
         </a>
       </div>
     </div>
