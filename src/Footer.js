@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <Contact />
+      <div className="code">Find the code at:</div>
       &copy;{today.getFullYear()} Justin Henley
     </footer>
   );
