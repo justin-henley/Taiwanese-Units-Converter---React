@@ -2,8 +2,7 @@ import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
 
-// TODO fix the way unit changes effect across values
-
+// TODO deal with swap button and font awesome icon won't import
 // TODO Add Mandarin for all units
 // TODO Add a language option to switch to Mandarin?
 // TODO Mobile-first CSS with mixins for viewport sizes
