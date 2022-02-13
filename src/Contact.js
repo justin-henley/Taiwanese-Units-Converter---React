@@ -1,4 +1,3 @@
-/* import styled, { css } from "styled-components"; */
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
