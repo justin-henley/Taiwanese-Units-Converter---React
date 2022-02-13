@@ -1,5 +1,4 @@
 // All conversion values
-// TODO find a way to manage the floating point imprecision
 export const conversionValues = {
   // Conversions for area to square meters
   Area: {
