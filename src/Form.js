@@ -28,16 +28,17 @@ const Form = ({
         isDisabled={false}
       />
       <br />
-      {/* <div id="swapDiv">
-        <FontAwesomeIcon
-          role="button"
-          tabIndex="0"
-          onClick={handleSwap}
-          aria-label={`Swap to and from values and units`}
-          icon={faRightLeft}
-          id="swapIcon"
-        />
-      </div> */}
+
+      {/* <div id="swapDiv"> */}
+      <FontAwesomeIcon
+        role="button"
+        tabIndex="0"
+        onClick={handleSwap}
+        aria-label={`Swap to and from values and units`}
+        icon={faRightLeft}
+        id="swapIcon"
+      />
+      {/* </div> */}
 
       <label htmlFor="inputB">Convert to:</label>
       <Entry

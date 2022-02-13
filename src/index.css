@@ -66,26 +66,28 @@ code {
   width: 100%;
 }
 
-#swapDiv {
+/* #swapDiv {
   height: 84px;
   padding: 0.5rem;
-  /* border: 2px solid gray; */
+  /* border: 2px solid gray;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   background-color: black;
-}
+} */
 
 #swapIcon {
   transition: all 0.2s ease-in-out;
-  background-color: white;
-  /* border: 1px solid red;
-  border-radius: 5px; */
-  height: 30px;
+  background-color: darkgray;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 100px;
+  width: 30px;
 }
 
-#swapIcon:hover,
-#swapIcon:focus {
-  color: red;
+#swapIcon:hover {
+  color: black;
+  background-color: lightgray;
   transform: scale(1.1);
 }
