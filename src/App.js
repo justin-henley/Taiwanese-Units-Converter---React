@@ -8,6 +8,8 @@ import Header from "./Header";
 // TODO Add a language option to switch to Mandarin?
 // TODO Mobile-first CSS with mixins for viewport sizes
 // TODO Mobile can't hover so buttons don't animate/change color. Use a mixin to change behavior based on size to guess at mobile/tablet
+// TODO Add better comments
+// TODO Clean up any commented-out code or old imports
 
 function App() {
   const appName = "Taiwanese Unit Conversion Calculator";
