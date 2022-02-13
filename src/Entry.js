@@ -3,6 +3,7 @@ import NumEntry from "./NumEntry";
 import UnitEntry from "./UnitEntry";
 
 const Entry = ({
+  id,
   box,
   entries,
   numHandler,
@@ -12,7 +13,7 @@ const Entry = ({
   isDisabled,
 }) => {
   return (
-    <fieldset className="Entry">
+    <fieldset className="Entry" id={id}>
       <NumEntry
         box={box}
         entries={entries}
