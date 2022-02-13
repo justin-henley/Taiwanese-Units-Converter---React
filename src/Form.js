@@ -2,8 +2,8 @@ import React from "react";
 import Entry from "./Entry";
 import { useState } from "react";
 import { conversionValues, convertMeasure } from "./conversions";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRightLeft } from "@fortawesome/free-solid-svg-icons";
+/* import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightLeft } from "@fortawesome/free-solid-svg-icons"; */
 
 const Form = ({
   entries,
@@ -30,14 +30,14 @@ const Form = ({
       <br />
 
       {/* <div id="swapDiv"> */}
-      <FontAwesomeIcon
+      {/* <FontAwesomeIcon
         role="button"
         tabIndex="0"
         onClick={handleSwap}
         aria-label={`Swap to and from values and units`}
         icon={faRightLeft}
         id="swapIcon"
-      />
+      /> */}
       {/* </div> */}
 
       <label htmlFor="inputB">Convert to:</label>
