@@ -9,10 +9,16 @@ const Entry = ({
   unitHandler,
   conversions,
   unitType,
+  isDisabled,
 }) => {
   return (
     <fieldset>
-      <NumEntry box={box} entries={entries} numHandler={numHandler} />
+      <NumEntry
+        box={box}
+        entries={entries}
+        numHandler={numHandler}
+        isDisabled={isDisabled}
+      />
       <UnitEntry
         box={box}
         entries={entries}

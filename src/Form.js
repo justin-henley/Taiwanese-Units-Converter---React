@@ -16,6 +16,7 @@ const Form = ({ entries, numHandler, unitHandler, conversions, unitType }) => {
         unitHandler={unitHandler}
         conversions={conversions}
         unitType={unitType}
+        isDisabled={false}
       />
       <br />
       <label htmlFor="inputB">Convert to:</label>
@@ -28,6 +29,7 @@ const Form = ({ entries, numHandler, unitHandler, conversions, unitType }) => {
         unitHandler={unitHandler}
         conversions={conversions}
         unitType={unitType}
+        isDisabled={true}
       />
     </form>
   );
