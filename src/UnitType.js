@@ -1,7 +1,6 @@
 import React from "react";
 
 const UnitType = ({ unitTypes, typeHandler, unitType }) => {
-  console.log(unitTypes);
   let key = 0;
   return (
     <select

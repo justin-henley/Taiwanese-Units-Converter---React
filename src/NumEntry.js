@@ -1,7 +1,6 @@
 import React from "react";
 
 const NumEntry = ({ box, entries, numHandler, isDisabled }) => {
-  console.log(`box ${box} is ${isDisabled} `);
   return (
     <input
       id={"input" + box}

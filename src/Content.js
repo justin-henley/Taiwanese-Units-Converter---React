@@ -21,9 +21,6 @@ const Content = () => {
   const [unitType, setUnitType] = useState("mass");
 
   const handleUnitTypeChange = (type) => {
-    console.log("changed type to " + type);
-    //TODO
-
     // return early if current type is the same as clicked type
     if (type === unitType) return;
 
@@ -45,8 +42,6 @@ const Content = () => {
         unit: newUnit,
       },
     ];
-    /* console.log(newEntries);
-    console.log("old entries: " + entries); */
     setEntries(newEntries);
   };
 
@@ -70,7 +65,6 @@ const Content = () => {
 
   // Handles changes to the unit on either of the values
   const handleUnitChange = (unit, entryChanged) => {
-    console.log(`Unit changed to ${unit} on entry ${entryChanged} `);
     const otherEntry = entryChanged == 1 ? 0 : 1;
     const tempEntries = [...entries];
 
@@ -88,7 +82,6 @@ const Content = () => {
 
   // Handles changes to either number entry field
   const handleNumberChange = (value, entryChanged) => {
-    console.log(`Number changed to ${value} on entry ${entryChanged} `);
     const otherEntry = entryChanged == 1 ? 0 : 1;
     const tempEntries = [...entries];
 

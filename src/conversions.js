@@ -69,13 +69,5 @@ export function convertMeasure(measure, fromUnit, toUnit, unitType) {
     conversionValues[unitType][fromUnit] *
     (1 / conversionValues[unitType][toUnit]);
 
-  /* // Update conversion history
-  conversionHistory.unshift({
-    measure,
-    fromUnit,
-    convertedMeasure,
-    toUnit,
-  });
-  console.log(conversionHistory); */
   return convertedMeasure;
 }
