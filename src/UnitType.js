@@ -1,22 +1,24 @@
 import React from "react";
 
-const UnitType = ({ unitTypes, typeHandler }) => {
+const UnitType = ({ unitTypes, typeHandler, unitType }) => {
   console.log(unitTypes);
   let key = 0;
   return (
-    <div className="UnitType">
+    <select
+      name={"selectUnitType"}
+      id={"selectUnitType"}
+      onChange={(e) => typeHandler(e.target.value)}
+      value={unitType}
+      className="UnitType"
+    >
       {unitTypes.map((type) => {
         return (
-          <button
-            key={"type" + key++}
-            onClick={(e) => typeHandler(e.target.value)}
-            value={type}
-          >
+          <option value={type} key={type + key++}>
             {type}
-          </button>
+          </option>
         );
       })}
-    </div>
+    </select>
   );
 };
 

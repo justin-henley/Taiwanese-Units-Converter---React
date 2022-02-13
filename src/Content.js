@@ -45,6 +45,8 @@ const Content = () => {
         unit: newUnit,
       },
     ];
+    /* console.log(newEntries);
+    console.log("old entries: " + entries); */
     setEntries(newEntries);
   };
 
@@ -78,7 +80,7 @@ const Content = () => {
       tempEntries[entryChanged].value,
       tempEntries[entryChanged].unit,
       tempEntries[otherEntry].unit,
-      "mass"
+      unitType
     );
 
     setEntries(tempEntries);
@@ -96,7 +98,7 @@ const Content = () => {
       tempEntries[entryChanged].value,
       tempEntries[entryChanged].unit,
       tempEntries[otherEntry].unit,
-      "mass"
+      unitType
     );
 
     // TODO the conversions
@@ -115,6 +117,7 @@ const Content = () => {
       <UnitType
         unitTypes={Object.keys(conversionValues)}
         typeHandler={handleUnitTypeChange}
+        unitType={unitType}
       />
     </main>
   );
