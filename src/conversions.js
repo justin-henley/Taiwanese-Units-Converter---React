@@ -2,50 +2,50 @@
 // TODO find a way to manage the floating point imprecision
 export const conversionValues = {
   // Conversions for area to square meters
-  area: {
+  Area: {
     // Taiwanese
-    ping: 400 / 121,
-    mu: 12000 / 121,
-    fen: 117360 / 121,
-    jia: 1173600 / 121,
-    li: 5868000 / 121,
+    "坪 - Píng": 400 / 121,
+    "畝 - Mǔ": 12000 / 121,
+    "分 - Fēn": 117360 / 121,
+    "甲 - Jiǎ": 1173600 / 121,
+    "犁 - Lí": 5868000 / 121,
     // Foreign
-    sqmeter: 1,
-    sqfoot: 0.09290341,
-    acre: 4046.873,
-    hectare: 10000,
+    "平方公尺 - Square Meter": 1,
+    "平方英尺 - Square Foot": 0.09290341,
+    "英畝 - Acre": 4046.873,
+    "公頃 - Hectare": 10000,
   },
   // Conversions for length to meters
-  length: {
+  Length: {
     // Taiwanese
-    fen: 1 / 330,
-    cun: 1 / 33,
-    chi: 10 / 33,
-    zhang: 100 / 33,
+    "分 - Fēn": 1 / 330,
+    "寸 - Cùn": 1 / 33,
+    "尺 - Chǐ": 10 / 33,
+    "丈 - Zhàng": 100 / 33,
     // Foreign
-    meter: 1,
-    inch: 0.0254,
-    foot: 0.3048,
-    yard: 0.9144,
-    mile: 1609.344,
-    km: 1000,
+    "公尺 - Meter": 1,
+    "英寸 - Inch": 0.0254,
+    "英尺 - Foot": 0.3048,
+    Yard: 0.9144,
+    "英里 - Mile": 1609.344,
+    "公里 - Kilometer": 1000,
   },
   // Conversions for mass to kilograms
-  mass: {
+  Mass: {
     // Taiwanese
-    li: 3 / 80000,
-    fen: 3 / 8000,
-    qian: 3 / 800,
-    liang: 3 / 80,
-    jin: 3 / 5,
-    dan: 60,
+    "釐 - Lí": 3 / 80000,
+    "分 - Fēn": 3 / 8000,
+    "錢 - Qián": 3 / 800,
+    "兩 - Liǎng": 3 / 80,
+    "斤 - Jīn": 3 / 5,
+    "擔 - Dàn": 60,
     // Foreign
-    kg: 1,
-    gram: 1 / 1000,
-    ounce: 0.028349523125,
-    pound: 0.45359237,
-    ton: 907.18474,
-    metricTon: 1000,
+    "公斤 - Kilogram": 1,
+    Gram: 1 / 1000,
+    Ounce: 0.028349523125,
+    Pound: 0.45359237,
+    Ton: 907.18474,
+    MetricTon: 1000,
   },
 };
 

@@ -9,16 +9,16 @@ const Content = () => {
     {
       id: 0,
       value: 0,
-      unit: "kg",
+      unit: "Kilogram",
     },
     {
       id: 1,
       value: 0,
-      unit: "kg",
+      unit: "Kilogram",
     },
   ]);
 
-  const [unitType, setUnitType] = useState("mass");
+  const [unitType, setUnitType] = useState("Mass");
 
   const handleUnitTypeChange = (type) => {
     // return early if current type is the same as clicked type
@@ -29,7 +29,7 @@ const Content = () => {
 
     // swap entries for relevant defaults
     const newUnit =
-      type === "mass" ? "pound" : type === "area" ? "sqmeter" : "meter";
+      type === "Mass" ? "pound" : type === "Area" ? "sqmeter" : "meter";
     const newEntries = [
       {
         id: 0,
