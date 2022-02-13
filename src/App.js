@@ -3,9 +3,10 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 function App() {
+  const appName = "Taiwanese Unit Conversion Calculator";
   return (
     <div className="App">
-      <Header />
+      <Header appName={appName} />
       <Content />
       <Footer />
     </div>
