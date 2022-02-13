@@ -1,13 +1,12 @@
 import React from "react";
 import Contact from "./Contact";
+import Portfolio from "./Portfolio";
 
 const Footer = () => {
-  const today = new Date();
   return (
     <footer>
+      <Portfolio />
       <Contact />
-      <div className="code">Find the code at:</div>
-      &copy;{today.getFullYear()} Justin Henley
     </footer>
   );
 };
