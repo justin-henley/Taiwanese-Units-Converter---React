@@ -17,7 +17,7 @@ const Form = ({
     <form className="Form" onSubmit={(e) => e.preventDefault()}>
       <label htmlFor="inputA">Convert from:</label>
       <Entry
-        id="inputA"
+        id="entry1"
         key="0"
         box="0"
         entries={entries}
@@ -42,7 +42,7 @@ const Form = ({
 
       <label htmlFor="inputB">Convert to:</label>
       <Entry
-        id="inputB"
+        id="entry2"
         key="1"
         box="1"
         entries={entries}
