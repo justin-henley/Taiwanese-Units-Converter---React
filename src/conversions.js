@@ -25,7 +25,7 @@ export const conversionValues = {
     "公尺 - Meter": 1,
     "英寸 - Inch": 0.0254,
     "英尺 - Foot": 0.3048,
-    Yard: 0.9144,
+    "碼 - Yard": 0.9144,
     "英里 - Mile": 1609.344,
     "公里 - Kilometer": 1000,
   },
@@ -40,11 +40,11 @@ export const conversionValues = {
     "擔 - Dàn": 60,
     // Foreign
     "公斤 - Kilogram": 1,
-    Gram: 1 / 1000,
-    Ounce: 0.028349523125,
-    Pound: 0.45359237,
-    Ton: 907.18474,
-    MetricTon: 1000,
+    "公克 - Gram": 1 / 1000,
+    "盎司 - Ounce": 0.028349523125,
+    "磅 - Pound": 0.45359237,
+    "噸 - Ton": 907.18474,
+    "公噸 - MetricTon": 1000,
   },
 };
 
