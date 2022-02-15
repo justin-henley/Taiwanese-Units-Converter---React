@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -14,12 +15,26 @@ import Header from "./Header";
 function App() {
   const appName = "Taiwanese Unit Conversion Calculator";
   return (
-    <div className="App">
+    <Div>
       <Header appName={appName} />
       <Content />
       <Footer />
-    </div>
+    </Div>
   );
 }
+
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 95vh;
+  width: 100%;
+  max-width: 600px;
+  /* margin: auto; */
+
+  border: 1px solid darkslategray;
+  border-radius: 6px;
+`;
 
 export default App;
