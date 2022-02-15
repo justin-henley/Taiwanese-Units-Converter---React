@@ -5,3 +5,8 @@ Currently supports conversion of mass, length, and area measures in a limited se
 See this app live at (https://justin-henley.github.io/Taiwanese-Units-Converter---React/)
 
 Created using React and Styled Components
+
+## Sources for units and conversions:
+
+- (https://en.wikipedia.org/wiki/Taiwanese_units_of_measurement)
+- (https://en.wikipedia.org/wiki/Chinese_units_of_measurement)
