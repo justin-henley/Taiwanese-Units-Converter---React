@@ -91,7 +91,7 @@ const Content = () => {
 
   // Handles changes to either number entry field
   const handleNumberChange = (value, entryChanged) => {
-    const otherEntry = entryChanged == 1 ? 0 : 1;
+    const otherEntry = parseInt(entryChanged) === 1 ? 0 : 1;
     const tempEntries = [...entries];
 
     tempEntries[entryChanged].value = value;

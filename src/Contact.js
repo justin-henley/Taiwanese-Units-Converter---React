@@ -1,5 +1,5 @@
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const Contact = () => {
   const icons = {
