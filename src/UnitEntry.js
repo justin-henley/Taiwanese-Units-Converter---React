@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const UnitEntry = ({ box, entries, unitHandler, conversions, unitType }) => {
   let listKey = 0;
@@ -6,12 +7,11 @@ const UnitEntry = ({ box, entries, unitHandler, conversions, unitType }) => {
   const units = Object.keys(conversions[unitType]);
 
   return (
-    <select
+    <StyledSelect
       name={"select" + box}
       id={"select" + box}
       onChange={(e) => unitHandler(e.target.value, box)}
       value={entries[box].unit}
-      className="UnitEntry"
     >
       {units.map((name) => {
         return (
@@ -20,8 +20,13 @@ const UnitEntry = ({ box, entries, unitHandler, conversions, unitType }) => {
           </option>
         );
       })}
-    </select>
+    </StyledSelect>
   );
 };
+
+const StyledSelect = styled.select`
+  width: 100%;
+  border-radius: 0;
+`;
 
 export default UnitEntry;
