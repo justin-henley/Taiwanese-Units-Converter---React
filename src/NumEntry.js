@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const NumEntry = ({ box, entries, numHandler, isDisabled }) => {
   let placeholder;
@@ -8,7 +9,7 @@ const NumEntry = ({ box, entries, numHandler, isDisabled }) => {
     placeholder = "To";
   }
   return (
-    <input
+    <StyledInput
       id={"input" + box}
       className="numEntry"
       type="text"
@@ -21,5 +22,11 @@ const NumEntry = ({ box, entries, numHandler, isDisabled }) => {
     />
   );
 };
+
+const StyledInput = styled.input`
+  font-size: 2rem;
+  width: 100%;
+  border: none;
+`;
 
 export default NumEntry;
