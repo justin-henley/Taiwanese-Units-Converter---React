@@ -146,7 +146,6 @@ footer {
   height: 100px;
 }
 
-.Contact,
 .Portfolio {
   width: 50%;
   display: flex;
@@ -159,43 +158,10 @@ footer {
   border-radius: 5px;
 }
 /* Set margins to avoid gap between */
-.Contact {
-  margin: 0 0 0 1px;
-  border-radius: 5px 0 5px 0;
-}
+
 .Portfolio {
   margin: 0 1px 0 0;
   border-radius: 0 5px 0 5px;
-}
-
-.social a {
-  text-decoration: none;
-  color: darkslategray;
-}
-
-.socialIcon {
-  transition: all 0.2s ease-in-out;
-  font-size: 50px;
-  padding: 5px;
-  margin: 5px;
-  background-color: white;
-  border-radius: 10px 0px 10px 0px;
-}
-
-.socialIcon:hover {
-  transform: scale(1.2);
-}
-
-#twitterLink:hover {
-  color: var(--twitter-color);
-}
-
-#linkedinLink:hover {
-  color: var(--linkedin-color);
-}
-
-#githubLink:hover {
-  color: var(--github-color);
 }
 
 .Portfolio a {
