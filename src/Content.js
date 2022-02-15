@@ -111,7 +111,7 @@ const Content = () => {
     setEntries(tempEntries);
   };
   return (
-    <main className="Content">
+    <main className="Content" style={{ width: "90%" }}>
       <Form
         entries={entries}
         numHandler={handleNumberChange}

@@ -32,10 +32,6 @@ code {
     monospace;
 }
 
-.Content {
-  width: 90%;
-}
-
 .Form {
   display: flex;
   justify-content: center;
