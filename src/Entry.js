@@ -1,9 +1,10 @@
 import React from "react";
+import styled, { css } from "styled-components";
 import NumEntry from "./NumEntry";
 import UnitEntry from "./UnitEntry";
 
 const Entry = ({
-  id,
+  isOutput,
   box,
   entries,
   numHandler,
@@ -13,7 +14,7 @@ const Entry = ({
   isDisabled,
 }) => {
   return (
-    <fieldset className="Entry" id={id}>
+    <StyledFieldset isOutput={isOutput}>
       <NumEntry
         box={box}
         entries={entries}
@@ -27,8 +28,24 @@ const Entry = ({
         conversions={conversions}
         unitType={unitType}
       />
-    </fieldset>
+    </StyledFieldset>
   );
 };
+
+const StyledFieldset = styled.fieldset`
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  padding: 0.5rem;
+  border: 2px solid gray;
+  border-radius: 10px 0 0 0;
+
+  ${(props) =>
+    props.isOutput &&
+    css`
+      border-radius: 0 10px 0 0;
+      border-left: none;
+    `}
+`;
 
 export default Entry;

@@ -12,29 +12,19 @@ const Form = ({
   unitType,
   handleSwap,
 }) => {
-  const styles = {
-    input: {
-      borderRadius: "10px 0 0 0",
-    },
-    output: {
-      borderRadius: "0 10px 0 0",
-      borderLeft: "none",
-    },
-  };
   return (
     <StyledForm onSubmit={(e) => e.preventDefault()}>
       <Label htmlFor="inputA">Convert from:</Label>
       <Entry
         key="0"
         box="0"
+        isOutput={false}
         entries={entries}
         numHandler={numHandler}
         unitHandler={unitHandler}
         conversions={conversions}
         unitType={unitType}
         isDisabled={false}
-        // TODO this rounded style wont apply
-        style={styles.input}
       />
 
       {/* <Swap /> */}
@@ -42,14 +32,13 @@ const Form = ({
       <Entry
         key="1"
         box="1"
+        isOutput={true}
         entries={entries}
         numHandler={numHandler}
         unitHandler={unitHandler}
         conversions={conversions}
         unitType={unitType}
         isDisabled={true}
-        // TODO this rounded style wont apply
-        style={styles.output}
       />
     </StyledForm>
   );

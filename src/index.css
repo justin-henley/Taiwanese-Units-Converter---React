@@ -33,20 +33,7 @@ code {
 }
 
 .Entry {
-  display: flex;
-  flex-direction: column;
-  height: 80px;
-  padding: 0.5rem;
-  border: 2px solid gray;
   /* border-radius: 10px 0 0 0; */
-}
-
-#entry1 {
-}
-
-#entry2 {
-  border-radius: 0 10px 0 0;
-  border-left: none;
 }
 
 .NumEntry {
