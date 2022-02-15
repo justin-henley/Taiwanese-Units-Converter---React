@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Taiwanese-Units-Converter---React/static/css/main.1ed4850d.css",
+    "main.js": "/Taiwanese-Units-Converter---React/static/js/main.259bcc90.js",
+    "static/js/787.5abda0d3.chunk.js": "/Taiwanese-Units-Converter---React/static/js/787.5abda0d3.chunk.js",
+    "index.html": "/Taiwanese-Units-Converter---React/index.html",
+    "main.1ed4850d.css.map": "/Taiwanese-Units-Converter---React/static/css/main.1ed4850d.css.map",
+    "main.259bcc90.js.map": "/Taiwanese-Units-Converter---React/static/js/main.259bcc90.js.map",
+    "787.5abda0d3.chunk.js.map": "/Taiwanese-Units-Converter---React/static/js/787.5abda0d3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ed4850d.css",
+    "static/js/main.259bcc90.js"
+  ]
+}
