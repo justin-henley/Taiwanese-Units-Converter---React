@@ -1,9 +1,10 @@
 import React from "react";
+import styled from "styled-components";
 
 const UnitType = ({ unitTypes, typeHandler, unitType }) => {
   let key = 0;
   return (
-    <select
+    <StyledSelect
       name={"selectUnitType"}
       id={"selectUnitType"}
       onChange={(e) => typeHandler(e.target.value)}
@@ -17,8 +18,16 @@ const UnitType = ({ unitTypes, typeHandler, unitType }) => {
           </option>
         );
       })}
-    </select>
+    </StyledSelect>
   );
 };
+
+const StyledSelect = styled.select`
+  width: 100%;
+  border: 1px solid darkslategray;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  padding: 2px;
+`;
 
 export default UnitType;
