@@ -113,29 +113,3 @@ header p {
   border-radius: 0 0 10px 10px;
   padding: 2px;
 }
-
-/* #swapDiv {
-  height: 84px;
-  padding: 0.5rem;
-  /* border: 2px solid gray;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  background-color: black;
-} */
-
-#swapIcon {
-  transition: all 0.2s ease-in-out;
-  background-color: lightgray;
-  color: black;
-  border: 2px solid gray;
-  border-radius: 3px;
-  height: 100px;
-  width: 30px;
-}
-
-#swapIcon:hover {
-  color: black;
-  background-color: darkgray;
-  transform: scale(1.1);
-}
