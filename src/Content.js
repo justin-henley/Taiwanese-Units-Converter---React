@@ -5,7 +5,7 @@ import { useState } from "react";
 import UnitType from "./UnitType";
 
 const Content = () => {
-  const DECIMAL_PLACES = 8;
+  const DECIMAL_PLACES = 2;
   const [entries, setEntries] = useState([
     {
       id: 0,
@@ -30,7 +30,11 @@ const Content = () => {
 
     // swap entries for relevant defaults
     const newUnit =
-      type === "Mass" ? "pound" : type === "Area" ? "sqmeter" : "meter";
+      type === "Mass"
+        ? "公斤 - Kilogram"
+        : type === "Area"
+        ? "平方公尺 - Square Meter"
+        : "公尺 - Meter";
     const newEntries = [
       {
         id: 0,
@@ -77,7 +81,8 @@ const Content = () => {
         tempEntries[0].value,
         tempEntries[0].unit,
         tempEntries[1].unit,
-        unitType
+        unitType,
+        DECIMAL_PLACES
       );
     }
 
@@ -94,18 +99,13 @@ const Content = () => {
     if (value === "") {
       tempEntries[otherEntry].value = "";
     } else {
-      let convertedValue = convertMeasure(
+      tempEntries[otherEntry].value = convertMeasure(
         tempEntries[entryChanged].value,
         tempEntries[entryChanged].unit,
         tempEntries[otherEntry].unit,
-        unitType
+        unitType,
+        DECIMAL_PLACES
       );
-
-      // Round the decimal
-      let roundedValue = +convertedValue.toFixed(DECIMAL_PLACES);
-
-      // Add rounded value to new entries
-      tempEntries[otherEntry].value = roundedValue;
     }
 
     setEntries(tempEntries);

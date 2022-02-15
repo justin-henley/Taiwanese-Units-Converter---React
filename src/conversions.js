@@ -48,7 +48,7 @@ export const conversionValues = {
   },
 };
 
-export function convertMeasure(measure, fromUnit, toUnit, unitType) {
+export function convertMeasure(measure, fromUnit, toUnit, unitType, precision) {
   // Check all arguments provided
   if (!measure || !fromUnit || !toUnit || !unitType) return undefined;
 
@@ -63,10 +63,10 @@ export function convertMeasure(measure, fromUnit, toUnit, unitType) {
     return undefined;
 
   // If all is valid, perform the conversion
-  const convertedMeasure =
+  const convertedValue =
     measure *
     conversionValues[unitType][fromUnit] *
     (1 / conversionValues[unitType][toUnit]);
 
-  return convertedMeasure;
+  return +convertedValue.toFixed(precision);
 }
