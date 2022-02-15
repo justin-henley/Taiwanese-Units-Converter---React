@@ -30,7 +30,10 @@ const Contact = () => {
         >
           <FaLinkedin style={icons.style} />
         </LinkButton>
-        <LinkButton href="" hoverColor={icons.color.twitter}>
+        <LinkButton
+          href="https://twitter.com/jah_dev"
+          hoverColor={icons.color.twitter}
+        >
           <FaTwitter style={icons.style} />
         </LinkButton>
       </Links>
