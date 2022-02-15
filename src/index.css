@@ -32,17 +32,6 @@ code {
     monospace;
 }
 
-.Form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Form label {
-  position: absolute;
-  left: -99999px;
-}
-
 .Entry {
   display: flex;
   flex-direction: column;
@@ -53,7 +42,6 @@ code {
 }
 
 #entry1 {
-  border-radius: 10px 0 0 0;
 }
 
 #entry2 {

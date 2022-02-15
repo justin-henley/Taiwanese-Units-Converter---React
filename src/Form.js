@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Entry from "./Entry";
 /* import Swap from "./Swap"; */
 /* import { FaRightLeft } from "react-icons/fa"; */
@@ -11,11 +12,19 @@ const Form = ({
   unitType,
   handleSwap,
 }) => {
+  const styles = {
+    input: {
+      borderRadius: "10px 0 0 0",
+    },
+    output: {
+      borderRadius: "0 10px 0 0",
+      borderLeft: "none",
+    },
+  };
   return (
-    <form className="Form" onSubmit={(e) => e.preventDefault()}>
-      <label htmlFor="inputA">Convert from:</label>
+    <StyledForm onSubmit={(e) => e.preventDefault()}>
+      <Label htmlFor="inputA">Convert from:</Label>
       <Entry
-        id="entry1"
         key="0"
         box="0"
         entries={entries}
@@ -24,12 +33,13 @@ const Form = ({
         conversions={conversions}
         unitType={unitType}
         isDisabled={false}
+        // TODO this rounded style wont apply
+        style={styles.input}
       />
-      <br />
+
       {/* <Swap /> */}
-      <label htmlFor="inputB">Convert to:</label>
+      <Label htmlFor="inputB">Convert to:</Label>
       <Entry
-        id="entry2"
         key="1"
         box="1"
         entries={entries}
@@ -38,9 +48,22 @@ const Form = ({
         conversions={conversions}
         unitType={unitType}
         isDisabled={true}
+        // TODO this rounded style wont apply
+        style={styles.output}
       />
-    </form>
+    </StyledForm>
   );
 };
+
+const StyledForm = styled.form`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Label = styled.label`
+  position: absolute;
+  left: -99999px;
+`;
 
 export default Form;
