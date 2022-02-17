@@ -17,7 +17,7 @@ const FooterDiv = styled.div`
   flex-direction: column-reverse;
   width: 100%;
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 600px) {
     flex-direction: row;
     width: 100%;
     height: 100px;

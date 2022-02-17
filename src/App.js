@@ -28,13 +28,18 @@ const Div = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 95vh;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   max-width: 600px;
   /* margin: auto; */
 
   border: 1px solid darkslategray;
   border-radius: 6px;
+
+  @media only screen and (min-width: 700px) {
+    height: 95vh;
+    max-height: 600px;
+  }
 `;
 
 export default App;

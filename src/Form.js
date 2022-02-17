@@ -46,8 +46,13 @@ const Form = ({
 
 const StyledForm = styled.form`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (min-width: 700px) {
+    flex-direction: row;
+  }
 `;
 
 const Label = styled.label`

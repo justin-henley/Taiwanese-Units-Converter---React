@@ -38,14 +38,26 @@ const StyledFieldset = styled.fieldset`
   height: 80px;
   padding: 0.5rem;
   border: 2px solid gray;
-  border-radius: 10px 0 0 0;
+  border-radius: 10px 10px 0 0;
 
   ${(props) =>
     props.isOutput &&
     css`
-      border-radius: 0 10px 0 0;
-      border-left: none;
+      border-radius: 0;
     `}
+
+  @media only screen and (min-width: 600px) {
+    height: 80px;
+    padding: 0.5rem;
+    border: 2px solid gray;
+    border-radius: 10px 0 0 0;
+    ${(props) =>
+      props.isOutput &&
+      css`
+        border-radius: 0 10px 0 0;
+        border-left: none;
+      `}
+  }
 `;
 
 export default Entry;

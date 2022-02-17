@@ -52,10 +52,11 @@ const ContactDiv = styled.div`
   color: white;
   margin: 0 0 1px 0;
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 600px) {
+    flex-direction: column;
     width: 50%;
     margin: 0 0 0 1px;
-    border-radius: 5px 0 5px 0;
+    border-radius: 0px 0 5px 0;
   }
 `;
 
