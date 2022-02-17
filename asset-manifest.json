@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Taiwanese-Units-Converter---React/static/css/main.1ed4850d.css",
-    "main.js": "/Taiwanese-Units-Converter---React/static/js/main.ad3e7562.js",
+    "main.js": "/Taiwanese-Units-Converter---React/static/js/main.fa478e2b.js",
     "static/js/787.5abda0d3.chunk.js": "/Taiwanese-Units-Converter---React/static/js/787.5abda0d3.chunk.js",
     "index.html": "/Taiwanese-Units-Converter---React/index.html",
     "main.1ed4850d.css.map": "/Taiwanese-Units-Converter---React/static/css/main.1ed4850d.css.map",
-    "main.ad3e7562.js.map": "/Taiwanese-Units-Converter---React/static/js/main.ad3e7562.js.map",
+    "main.fa478e2b.js.map": "/Taiwanese-Units-Converter---React/static/js/main.fa478e2b.js.map",
     "787.5abda0d3.chunk.js.map": "/Taiwanese-Units-Converter---React/static/js/787.5abda0d3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1ed4850d.css",
-    "static/js/main.ad3e7562.js"
+    "static/js/main.fa478e2b.js"
   ]
 }
