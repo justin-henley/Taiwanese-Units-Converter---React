@@ -74,7 +74,7 @@ const LinkButton = styled.a.attrs((props) => ({
 
   &:hover {
     color: ${(props) => props.hoverColor};
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 `;
 
