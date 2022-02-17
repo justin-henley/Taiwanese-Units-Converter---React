@@ -17,11 +17,11 @@ const Portfolio = () => {
     <PortfolioDiv>
       <H1>Find this app and more at</H1>
       <LinkButton
-        href="https://justin-henley.github.io/"
+        href="https://www.justin-henley.com/"
         hoverColor={icons.color.portfolio}
         style={icons.style}
       >
-        justin-henley.github.io
+        www.justin-henley.com
       </LinkButton>
       <Copyright id="copyright">
         &copy;{today.getFullYear()} Justin Henley
@@ -31,22 +31,30 @@ const Portfolio = () => {
 };
 
 const PortfolioDiv = styled.div`
-  width: 50%;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-size: 24px;
   background-color: darkslategray;
   color: white;
-  border-radius: 5px;
-  margin: 0 1px 0 0;
-  border-radius: 0 5px 0 5px;
+  margin: auto @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 1px 0 0;
+    border-radius: 0 5px 0 5px;
+  }
 `;
 
 const H1 = styled.h1`
   font-size: 1em;
   font-weight: normal;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const LinkButton = styled.a.attrs((props) => ({

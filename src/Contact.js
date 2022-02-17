@@ -42,22 +42,29 @@ const Contact = () => {
 };
 
 const ContactDiv = styled.div`
-  width: 50%;
   display: flex;
-  flex-direction: column;
+  flex-grow: 1;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   font-size: 24px;
   background-color: darkslategray;
   color: white;
-  border-radius: 5px;
-  margin: 0 0 0 1px;
-  border-radius: 5px 0 5px 0;
+  margin: 0 0 1px 0;
+
+  @media only screen and (min-width: 700px) {
+    width: 50%;
+    margin: 0 0 0 1px;
+    border-radius: 5px 0 5px 0;
+  }
 `;
 
 const H1 = styled.h1`
   font-size: 1em;
   font-weight: normal;
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const Links = styled.div`
